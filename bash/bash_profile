@@ -1,0 +1,48 @@
+export LC_ALL=en_US.UTF-8
+export PATH=~/Library/Python/2.7/bin:$PATH
+export PATH="$PATH:~/"
+export PATH="$PATH:~/awsscripts"
+export BASH_SILENCE_DEPRECATION_WARNING=1
+export TERM=xterm-256color
+gam() { "/Users/bertzijngedacht/bin/gam/gam" "$@" ; }
+# Various variables you might want for your PS1 prompt instead
+# PS1="👻:$"
+# we pass 2 parameters to __git_ps1 as pre and post which are strings.
+export PROMPT_COMMAND='__git_ps1 "\W" "($)""\[\e[33m\] ⌁ \[\e[0m\]"'
+
+# if .git-prompt.sh exists, set options and execute it
+if [ -f ~/.git-prompt.sh ]; then
+	GIT_PS1_SHOWDIRTYSTATE=true
+	GIT_PS1_SHOWSTASHSTATE=true
+	GIT_PS1_SHOWUNTRACKEDFILES=true
+	GIT_PS1_SHOWUPSTREAM="auto"
+	GIT_PS1_HIDE_IF_PWD_IGNORED=true
+	GIT_PS1_SHOWCOLORHINTS=true
+	. ~/.git-prompt.sh
+fi
+#
+#alias
+# pull in private stuff
+if [ -f ~/.bash_aliases ]; then
+	. ~/.bash_aliases
+fi
+
+alias ll='ls -la'
+alias rf='rm -rf'
+alias proxyssh='~/awsscripts/ssh/proxyssh.sh'
+alias proxy2ssh='~/awsscripts/ssh/proxy2.sh'
+alias proxysync='~/awsscripts/ssh/proxysync.sh'
+alias proxy='~/awsscripts/ssh/proxy.sh'
+alias proxydisconnect='~/awsscripts/ssh/proxydisconnect.sh'
+alias cdaws='cd ~/awsscripts'
+alias scripts='cd ~/awsscripts'
+alias proxies='aws ec2 describe-instances  --filters "Name=key-name,Values=inbo-ops-proxy"|grep PRIVATEIPADDRESSES'
+alias publicip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias checknetwork='/Volumes/GoogleDrive/My\ Drive/apps/scripts/checknetwork/checknetwork.sh'
+alias cdssh='cd ~/awsscripts/ssh'
+alias genpass='openssl rand -base64 6'
+alias cdpem='cd ~/pem'
+complete -C aws_completer aws
+alias instance="~/awsscripts/Compute/EC2/instance.sh"
+alias ip="~/awsscripts/ip.sh"
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
