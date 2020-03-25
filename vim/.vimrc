@@ -12,4 +12,4 @@ set number
 :vmap <Leader>c :w !pbcopy<CR><CR>
 set wildmenu
 let @q=':e scp://proxyserver//etc/nginx/conf.d/' 
-let @b='i#!/bin/sh#'
+let @b='i#!/bin/sh# '

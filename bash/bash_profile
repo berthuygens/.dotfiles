@@ -45,4 +45,5 @@ alias cdpem='cd ~/pem'
 complete -C aws_completer aws
 alias instance="~/awsscripts/Compute/EC2/instance.sh"
 alias ip="~/awsscripts/ip.sh"
+alias dnsintern='~/awsscripts/Networking/53/53-internal.sh'
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
