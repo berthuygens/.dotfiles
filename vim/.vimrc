@@ -11,10 +11,12 @@ set background=dark
 colorscheme dracula
 set number
 " mappings 
-imap <leader>' ''<ESC>i
-imap <leader>" ""<ESC>i
-imap <leader>( ()<ESC>i
-imap <leader>[ []<ESC>i
+map <leader>n :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+inoremap <leader>' ''<ESC>i
+inoremap <leader>" ""<ESC>i
+inoremap <leader>( ()<ESC>i
+inoremap <leader>[ []<ESC>i
 :vmap <Leader>c :w !pbcopy<CR><CR>
 :map OP :setlocal spell! spelllang=en_us  
 let @q=':e scp://proxyserver//etc/nginx/conf.d/' 

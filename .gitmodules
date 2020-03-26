@@ -1,0 +1,3 @@
+[submodule "/Users/bertzijngedacht/.dotfiles/vim/.vim/bundle/nerdtree"]
+	path = /Users/bertzijngedacht/.dotfiles/vim/.vim/bundle/nerdtree
+	url = https://github.com/preservim/nerdtree.git

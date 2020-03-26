@@ -4,6 +4,7 @@ export PATH="$PATH:~/"
 export PATH="$PATH:~/awsscripts"
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export TERM=xterm-256color
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 gam() { "/Users/bertzijngedacht/bin/gam/gam" "$@" ; }
 # Various variables you might want for your PS1 prompt instead
 # PS1="👻:$"
@@ -26,7 +27,7 @@ fi
 if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
 fi
-
+# aliasses
 alias ll='ls -la'
 alias rf='rm -rf'
 alias proxyssh='~/awsscripts/ssh/proxyssh.sh'
@@ -44,6 +45,5 @@ alias genpass='openssl rand -base64 6'
 alias cdpem='cd ~/pem'
 complete -C aws_completer aws
 alias instance="~/awsscripts/Compute/EC2/instance.sh"
-alias ip="~/awsscripts/ip.sh"
-alias dnsintern='~/awsscripts/Networking/53/53-internal.sh'
-export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+alias ip="~/awsscripts/Networking/ip.sh"
+alias dnsinternal='~/awsscripts/Networking/53/53-internal.sh'
