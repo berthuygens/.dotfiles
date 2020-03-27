@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =9
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='scp://proxyserver//etc/nginx/conf.d/'
 let g:netrw_dirhist_9='/Users/bertzijngedacht/awsscripts/.git'
 let g:netrw_dirhist_8='/Users/bertzijngedacht/awsscripts'
 let g:netrw_dirhist_7='/Users/bertzijngedacht/awsscripts/Networking'
