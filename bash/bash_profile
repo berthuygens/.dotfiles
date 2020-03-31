@@ -22,12 +22,16 @@ if [ -f ~/.git-prompt.sh ]; then
 	. ~/.git-prompt.sh
 fi
 #
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    tmux attach -t default || tmux new -s default
+fi
 #alias
 # pull in private stuff
 if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
 fi
 # aliasses
+alias :q="exit"
 alias ll='ls -la'
 alias rf='rm -rf'
 alias proxyssh='~/awsscripts/ssh/proxyssh.sh'

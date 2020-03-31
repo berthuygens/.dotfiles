@@ -11,7 +11,7 @@ set background=dark
 colorscheme dracula
 set number
 " mappings 
-map <leader>n :NERDTreeToggle<CR>
+map OQ :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 inoremap <leader>' ''<ESC>i
 inoremap <leader>" ""<ESC>i
