@@ -19,5 +19,9 @@ inoremap <leader>( ()<ESC>i
 inoremap <leader>[ []<ESC>i
 :vmap <Leader>c :w !pbcopy<CR><CR>
 :map OP :setlocal spell! spelllang=en_us  
+"macros
 let @q=':e scp://proxyserver//etc/nginx/conf.d/' 
 let @b='i#!/bin/sh# '
+"Create special d register for UTC date/time
+let @d = system("date -u \"+\%Y-\%m-\%dT\%H:\%M:\%SZ\"")
+let @d=substitute(strtrans(@d),'\^@',' ','g')
