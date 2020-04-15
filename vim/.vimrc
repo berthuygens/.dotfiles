@@ -22,6 +22,9 @@ inoremap <leader>[ []<ESC>i
 "macros
 let @q=':e scp://proxyserver//etc/nginx/conf.d/' 
 let @b='i#!/bin/sh# '
-"Create special d register for UTC date/time
-let @d = system("date -u \"+\%Y-\%m-\%dT\%H:\%M:\%SZ\"")
-let @d=substitute(strtrans(@d),'\^@',' ','g')
+au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
+"Commands
+command! InsertUtc :execute 'norm i' .
+    \ substitute(system("date -u \"+\%Y-\%m-\%dT\%H:\%M:\%SZ\""), '\n\+$', '', '')
+command! InsertDate :execute 'norm i' .
+    \ substitute(system("date '+%a %b %d - %Y-%m-%d %H:%M:%S %Z'"), '\n\+$', '', '')
