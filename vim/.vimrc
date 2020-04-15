@@ -24,7 +24,7 @@ let @q=':e scp://proxyserver//etc/nginx/conf.d/'
 let @b='i#!/bin/sh# '
 au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
 "Commands
-command! InsertUtc :execute 'norm i' .
-    \ substitute(system("date -u \"+\%Y-\%m-\%dT\%H:\%M:\%SZ\""), '\n\+$', '', '')
+command! InsertUtcPlus3 :execute 'norm i' .
+    \ substitute(system("date -v +3M -u \"+\%Y-\%m-\%dT\%H:\%M:\%SZ\""), '\n\+$', '', '')
 command! InsertDate :execute 'norm i' .
     \ substitute(system("date '+%a %b %d - %Y-%m-%d %H:%M:%S %Z'"), '\n\+$', '', '')
