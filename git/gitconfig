@@ -17,6 +17,7 @@
 	dc = diff --cached
 	nb = checkout -b
 	lg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset' -20
+	last =  rev-parse HEAD
 	oups = commit --amend --no-edit
 	r = remote -v
 	rh = reset --hard

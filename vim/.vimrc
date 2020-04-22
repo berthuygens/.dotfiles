@@ -11,8 +11,11 @@ set background=dark
 colorscheme dracula
 set number
 " mappings 
-map OQ :NERDTreeToggle<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+nnoremap gl $
+nnoremap gh 0
+nnoremap gk H
+nnoremap gj L
+:nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 inoremap <leader>' ''<ESC>i
 inoremap <leader>" ""<ESC>i
 inoremap <leader>( ()<ESC>i
@@ -28,3 +31,6 @@ command! InsertUtcPlus3 :execute 'norm i' .
     \ substitute(system("date -v +3M -u \"+\%Y-\%m-\%dT\%H:\%M:\%SZ\""), '\n\+$', '', '')
 command! InsertDate :execute 'norm i' .
     \ substitute(system("date '+%a %b %d - %Y-%m-%d %H:%M:%S %Z'"), '\n\+$', '', '')
+let @u='/"di":InsertUtcPlus3'
+au BufWinLeave * mkview
+au BufWinEnter * silent loadview
