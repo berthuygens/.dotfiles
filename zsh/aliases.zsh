@@ -21,3 +21,7 @@ complete -C aws_completer aws
 alias instance="~/awsscripts/Compute/Ec2/Instances/instance.sh"
 alias ip="~/awsscripts/Networking/ip.sh"
 alias dnsinternal='~/awsscripts/Networking/53/53-internal.sh'
+alias mixtape='spotify play uri spotify:playlist:3MP4Gsm9zTDsI2BGTaB4YS'
+alias stop='spotify stop'
+alias play='spotify play'
+alias workspace='tmux split-window -h -t 0 && tmux split-window -v && tmux selectp -t 0 '
