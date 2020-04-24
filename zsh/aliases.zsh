@@ -1,3 +1,4 @@
+alias vim='vim -p'
 alias :q="exit"
 alias ll='ls -la'
 alias rf='rm -rf'
@@ -24,4 +25,7 @@ alias dnsinternal='~/awsscripts/Networking/53/53-internal.sh'
 alias mixtape='spotify play uri spotify:playlist:3MP4Gsm9zTDsI2BGTaB4YS'
 alias stop='spotify stop'
 alias play='spotify play'
-alias workspace='tmux split-window -h -t 0 && tmux split-window -v && tmux selectp -t 0 '
+alias next='spotify next'
+alias discoverweekly='spotify play uri spotify:playlist:37i9dQZEVXcS8aklwKhZDo'
+alias shuffle='spotify toggle shuffle'
+alias workspace='tmux split-window -h -p 40 -t 0 && tmux split-window -v && tmux selectp -t 0 '

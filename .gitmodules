@@ -1,3 +1,6 @@
 [submodule "/Users/bertzijngedacht/.dotfiles/vim/.vim/bundle/nerdtree"]
 	path = /Users/bertzijngedacht/.dotfiles/vim/.vim/bundle/nerdtree
 	url = https://github.com/preservim/nerdtree.git
+[submodule "vim/.vim/bundle/vim-equinusocio-material"]
+	path = vim/.vim/bundle/vim-equinusocio-material
+	url = https://github.com/chuling/vim-equinusocio-material.git
