@@ -1,6 +1,7 @@
 [user]
 	email = bert.huygens@inbo.be 
 	name = berthuygens
+	signingkey = A86147AD3758BE24
 [alias]
 	a = add .
 	b = branch -v
@@ -130,3 +131,4 @@
 	required = true
 [commit]
 	template = ~/.gitmessage
+	gpgsign = true

@@ -1,8 +1,7 @@
 alias vim='vim -p'
-alias :q="exit"
 alias ll='ls -la'
 alias rf='rm -rf'
-alias commitID='git rev-parse HEAD' 
+alias gcid='git rev-parse HEAD' 
 alias proxyssh='~/awsscripts/ssh/proxyssh.sh'
 alias proxy2ssh='~/awsscripts/ssh/proxy2.sh'
 alias proxysync='~/awsscripts/ssh/proxysync.sh'
