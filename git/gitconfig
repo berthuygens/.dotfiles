@@ -132,3 +132,5 @@
 [commit]
 	template = ~/.gitmessage
 	gpgsign = true
+[gpg]
+	program = gpg
