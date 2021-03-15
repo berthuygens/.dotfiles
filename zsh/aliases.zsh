@@ -17,7 +17,6 @@ alias checknetwork='/Volumes/GoogleDrive/My\ Drive/apps/scripts/checknetwork/che
 alias cdssh='cd ~/awsscripts/ssh'
 alias genpass='openssl rand -base64 6'
 alias cdpem='cd ~/pem'
-complete -C aws_completer aws
 alias instance="~/awsscripts/Compute/Ec2/Instances/instance.sh"
 alias ip="~/awsscripts/Networking/ip.sh"
 alias dnsinternal='~/awsscripts/Networking/53/53-internal.sh'
@@ -26,6 +25,8 @@ alias stop='spotify stop'
 alias play='spotify play'
 alias next='spotify next'
 alias discoverweekly='spotify play uri spotify:playlist:37i9dQZEVXcS8aklwKhZDo'
-alias shuffle='spotify toggle shuffle'
+alias focus='spotify play uri spotify:playlist:0vvXsWCC9xrXsKd4FyS8kM && quote '
+alias shuffle='spotify toggle shuffle' 
 alias workspace='tmux split-window -h -p 40 -t 0 && tmux split-window -v && tmux selectp -t 0 '
-alias weather='curl -s "wttr.in/{gent+belgium}"'
+alias weather='curl -s "wttr.in/{gent+belgium}" && curl -s "wttr.in/{gent+belgium?format=v2}"'
+alias rain='curl -s "wttr.in/{gent+belgium?format=v2}"'
