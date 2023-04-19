@@ -1,7 +1,7 @@
 [user]
 	email = bert.huygens@inbo.be 
 	name = berthuygens
-	signingkey = A86147AD3758BE24
+	signingkey = 5AF5B2E425961543
 [alias]
 	a = add .
 	b = branch -v
